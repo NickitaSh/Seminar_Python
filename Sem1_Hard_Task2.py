@@ -1,6 +1,6 @@
 number = list(input('Введите трехзначное число:\n'))
-sum = 0
+temp = 0
 
 for i in number:
-    sum += int(i)
-print(sum)
+    temp += int(i)
+print(temp)
