@@ -1,7 +1,5 @@
-class_word = b'class'
-function_word = b'function'
-method_word = b'method'
+words = ['class', 'function', 'method']
+byte_words = [bytes(word, 'utf-8') for word in words]
 
-print(type(class_word), class_word, len(class_word))
-print(type(function_word), function_word, len(function_word))
-print(type(method_word), method_word, len(method_word))
+for byte_word in byte_words:
+    print(type(byte_word), byte_word, len(byte_word))

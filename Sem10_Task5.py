@@ -1,5 +1,6 @@
 import subprocess
 import chardet
+
 import subprocess
 
 def ping_web_resource(url):
