@@ -1,20 +1,21 @@
-development = ''.join(sorted('development'))
-socket = ''.join(sorted('socket'))
-decorator = ''.join(sorted('decorator'))
+words = ["development", "socket", "decorator"]
 
+sorted_letters = []
+for word in words:
+    sorted_word = sorted(word)
+    sorted_letters.append(sorted_word)
 
-def get_codepoints(word):
-    return {ord(char) for char in word}
+for i, word in enumerate(words):
+    print(f"Sorted letters for {word}: {sorted_letters[i]}")
+    print(f"Type of sorted letters for {word}: {type(sorted_letters[i])}\n")
 
+code_points = []
+for word in words:
+    word_code_points = []
+    for letter in word:
+        word_code_points.append(ord(letter))
+    code_points.append(word_code_points)
 
-development_codepoints = get_codepoints(development)
-socket_codepoints = get_codepoints(socket)
-decorator_codepoints = get_codepoints(decorator)
-
-print(type(development), development)
-print(type(socket), socket)
-print(type(decorator), decorator)
-
-print(type(development_codepoints), development_codepoints)
-print(type(socket_codepoints), socket_codepoints)
-print(type(decorator_codepoints), decorator_codepoints)
+for i, word in enumerate(words):
+    print(f"Code points for {word}: {code_points[i]}")
+    print(f"Type of code points for {word}: {type(code_points[i])}\n")
