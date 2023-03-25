@@ -1,21 +1,23 @@
-words = ["development", "socket", "decorator"]
+# Создаем список слов для преобразования в буквенный формат
+words = ['разработка', 'сокет', 'декоратор']
 
-sorted_letters = []
+letter_list = []
+
 for word in words:
-    sorted_word = sorted(word)
-    sorted_letters.append(sorted_word)
-
-for i, word in enumerate(words):
-    print(f"Sorted letters for {word}: {sorted_letters[i]}")
-    print(f"Type of sorted letters for {word}: {type(sorted_letters[i])}\n")
-
-code_points = []
-for word in words:
-    word_code_points = []
+    letter_word = ''
     for letter in word:
-        word_code_points.append(ord(letter))
-    code_points.append(word_code_points)
+        letter_word += '\\' + format(ord(letter), 'x')
+    letter_list.append(letter_word)
 
-for i, word in enumerate(words):
-    print(f"Code points for {word}: {code_points[i]}")
-    print(f"Type of code points for {word}: {type(code_points[i])}\n")
+for letter_word in letter_list:
+    print(type(letter_word), letter_word, len(letter_word))
+
+unicode_list = []
+for letter_word in letter_list:
+    unicode_word = ''
+    for letter in letter_word.split('\\')[1:]:
+        unicode_word += chr(int(letter, 16))
+    unicode_list.append(unicode_word)
+
+for unicode_word in unicode_list:
+    print(type(unicode_word), unicode_word, len(unicode_word))

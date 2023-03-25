@@ -1,6 +1,5 @@
 words = ['атрибут', 'class', 'function', 'type']
 
-
 for word in words:
     try:
 

@@ -3,6 +3,7 @@ import chardet
 
 import subprocess
 
+
 def ping_web_resource(url):
     ping_cmd = ['ping', '-c', '4', '-W', '3', url]
     ping_proc = subprocess.run(ping_cmd, capture_output=True)

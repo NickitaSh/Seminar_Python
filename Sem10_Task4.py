@@ -1,5 +1,4 @@
 words = ['разработка', 'администрирование', "protocol", "standard"]
-
 byte_repr = []
 
 for word in words:
